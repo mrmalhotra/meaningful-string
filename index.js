@@ -14,20 +14,14 @@ this.last = last;
 
 generateString.prototype.animal = function () {
 
-}
+};
 
-generateString.prototype.random = function (object) {
+function getRandom(object) {
     let string = '';
     let referralString = mixedChars;
     let lengthShouldBeAtlast = mixedChars.length;
     let lengthShouldBeAtleast = 4;
     let lengthShouldBe = lengthShouldBeAtlast;
-
-    // let capsWithNumbers = object.capsWithNumbers;
-    // let smallWithNumbers = object.smallWithNumbers;;
-    // let onlyNumbers = object.onlyNumbers;;
-    // let onlySmallCase = object.onlySmallCase;;
-    // let onlyCapsCase = object.onlyCapsCase;;
 
     if(object && object.allCaps)
         referralString = upperCaseAlphabats;
@@ -49,13 +43,13 @@ generateString.prototype.random = function (object) {
     if (object && object.max)
         lengthShouldBeAtlast = parseInt(object.max);
 
-    if (object && object.max)
+    if (object && object.min)
         lengthShouldBeAtleast = parseInt(object.min);
 
     if (object && object.max && object.min){
-       let minimum = lengthShouldBeAtlast - lengthShouldBeAtleast;
-       let maximum = lengthShouldBeAtlast - minimum;
-        lengthShouldBe = Math.ceil(Math.random() * minimum) + maximum ;
+        let minimum = lengthShouldBeAtlast - lengthShouldBeAtleast;
+        let maximum = lengthShouldBeAtlast - minimum;
+        lengthShouldBe = Math.ceil(Math.random() * minimum) + maximum;
     }
 
     for (let i = 0; i < lengthShouldBe; i++) {
@@ -63,4 +57,48 @@ generateString.prototype.random = function (object) {
         string += referralString[val];
     }
     return string;
+}
+
+generateString.prototype.random =  (object) => {
+    // let string = '';
+    // let referralString = mixedChars;
+    // let lengthShouldBeAtlast = mixedChars.length;
+    // let lengthShouldBeAtleast = 4;
+    // let lengthShouldBe = lengthShouldBeAtlast;
+    //
+    // if(object && object.allCaps)
+    //     referralString = upperCaseAlphabats;
+    //
+    // if(object && object.allSmall)
+    //     referralString = smallCaseAlphabats;
+    //
+    // if(object && object.capsWithNumbers)
+    //     referralString = upperAlphanumeric;
+    //
+    // if(object && object.smallWithNumbers)
+    //     referralString = smallAlphanumeric;
+    //
+    // if(object && object.onlyNumbers)
+    //     referralString = number;
+    //
+    //
+    //
+    // if (object && object.max)
+    //     lengthShouldBeAtlast = parseInt(object.max);
+    //
+    // if (object && object.min)
+    //     lengthShouldBeAtleast = parseInt(object.min);
+    //
+    // if (object && object.max && object.min){
+    //    let minimum = lengthShouldBeAtlast - lengthShouldBeAtleast;
+    //    let maximum = lengthShouldBeAtlast - minimum;
+    //     lengthShouldBe = Math.ceil(Math.random() * minimum) + maximum;
+    // }
+    //
+    // for (let i = 0; i < lengthShouldBe; i++) {
+    //     let val = Math.floor(Math.random() * referralString.length - 1) + 1;
+    //     string += referralString[val];
+    // }
+    // return string;
+    return getRandom(object);
 };
