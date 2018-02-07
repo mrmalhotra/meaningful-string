@@ -1,10 +1,10 @@
 ## Meaningful String
 **Meaningful String** is an npm package which generates a random meaningful string.
 
-###Getting Started
+##Getting Started
 Here is how you can install this package globally using npm
 
-####Installation
+##Installation
 using npm
 ```
 $ npm install meaningful-string -g
@@ -22,5 +22,6 @@ const generate = new meaningfulString();
 console.log('Random String: ',generate.random());
 ```
 
-######Result
+**Result**
+
 ``Random String HJ7H9Lkt7hFdS7mJY48NnmHH6hDdg76lIfaD4MhU6Y``
