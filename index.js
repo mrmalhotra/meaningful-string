@@ -1,4 +1,6 @@
 module.exports = generateString;
+const animal = require('./assets/animal');
+const adjective = require('./assets/adjectives');
 
 const number = '1234567890';
 const smallCaseAlphabats = 'abcdefghijklmnopqrstuvwxyz';
@@ -102,3 +104,7 @@ generateString.prototype.random =  (object) => {
     // return string;
     return getRandom(object);
 };
+
+generateString.prototype.meaningful = () =>{
+
+}
