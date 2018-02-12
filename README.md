@@ -14,10 +14,9 @@ In Node.js:
 
 ```
 //Load the full package
-const meaningfulString = require('meaningful-string');
+const generate = require('meaningful-string');
 
 //Generate random string
-const generate = new meaningfulString();
 
 console.log('Random String: ',generate.random());
 ```
