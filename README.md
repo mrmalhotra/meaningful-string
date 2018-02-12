@@ -56,3 +56,54 @@ There are a few options that can be useful:
 **smallWithNumbers**: It tells that only the Lower case alphabets (range: a-z) and numbers (range: 0-9) are allowed in the generated random string.
 
 **onlyNumbers**: It tells that only numbers (0-9) are allowed in the generated random string.
+
+**custom**: You can also define your own charset.
+
+##meanigful
+
+It is a function which generates string using animal names followed by adjectives followed by numbers
+
+
+##Usage
+```
+var options = {
+"numberUpto":60,
+"joinBy":'-
+}
+
+console.log('Random Meaningful String: ',generate.meaningful(options));
+
+console.log('Random Meaningful String: ',generate.meaningful(options));
+```
+
+**Result**
+
+``'Random Meaningful String: rat-smile-45``
+
+``'Random Meaningful String: Fox-emotional-32``
+
+
+##shortId
+
+It is a function which generates short id.
+
+**Note**: it generates the short Id in the range of 0-8 i.e. charLength can be minimum: 0 and maximum:8.
+
+
+##Usage
+```
+var options = {
+"charLength":6,
+"custom":"frt564"
+}
+
+console.log('Random ShortId: ',generate.shortId(options));
+
+console.log('Random ShortId: ',generate.shortId(options));
+```
+
+**Result**
+
+``'Random ShortId: ff6ftr``
+
+``'Random ShortId: ftr5r4``
