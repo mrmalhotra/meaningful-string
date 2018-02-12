@@ -56,6 +56,23 @@ function getRandom(object) {
 
 //returns random string according to the params
 random =  (object) => {
+    if(object && object.max && !object.min)
+    {
+        if(parseInt(object.max) <=3){
+            object.min = 3;
+            object.max = 3;
+        }else object.min = object.max - 1;
+    }
+
+    if(object && object.min && !object.max )
+    {
+        if(parseInt(object.min) <=3){
+            object.min = 3
+            object.max = 3;
+        }else object.max = object.min + 1;
+    }
+
+
     return getRandom(object);
 };
 

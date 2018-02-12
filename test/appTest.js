@@ -29,6 +29,14 @@ describe('App',()=>{
 
     }
 
+    it(`Should return length 3`,()=>{
+        assert.equal(random.random({min:3}).length,3);
+    })
+
+    it(`Should return length 3`,()=>{
+        assert.equal(random.random({max:3}).length,3);
+    })
+
 })
 
 
