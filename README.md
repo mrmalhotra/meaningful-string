@@ -57,6 +57,7 @@ There are a few options that can be useful:
 **onlyNumbers**: It tells that only numbers (0-9) are allowed in the generated random string.
 
 **custom**: You can also define your own charset.
+**charLength**: When you specify charLength, it will take privilege over min, max parameters. This string will be generated exact the length of **charLength**.
 
 ##meanigful
 

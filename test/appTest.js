@@ -29,13 +29,20 @@ describe('App',()=>{
 
     }
 
-    it(`Should return length 3`,()=>{
-        assert.equal(random.random({min:3}).length,3);
+    for(var i= 0;i<10;i++){
+        it(`Should return string id with length ${i} and should be equal`,()=>{
+            assert.equal(random.random({charLength:i}).length,i);
+        })
+    }
+
+    it('no value in max',()=>{
+        assert.isAbove(random.random({min:3}).length,10)
     })
 
-    it(`Should return length 3`,()=>{
-        assert.equal(random.random({max:3}).length,3);
+    it('no value in min',()=>{
+        assert.isAbove(random.random({max:7}).length,10)
     })
+
 
 })
 

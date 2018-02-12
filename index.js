@@ -33,19 +33,18 @@ function getRandom(object) {
     if(object && object.onlyNumbers)
         referralString = number;
 
-
-
     if (object && object.max)
         lengthShouldBeAtlast = parseInt(object.max);
 
     if (object && object.min)
         lengthShouldBeAtleast = parseInt(object.min);
 
-    if (object && object.max && object.min){
-        // let minimum = lengthShouldBeAtlast - lengthShouldBeAtleast;
-        // let maximum = lengthShouldBeAtlast - minimum;
+    if (object && object.max && object.min)
         lengthShouldBe = Math.floor(Math.random() * (object.max - object.min + 1)) + object.min;
-    }
+
+    if (object && object.charLength)
+        lengthShouldBe = parseInt(object.charLength)
+
 
     for (let i = 0; i < lengthShouldBe; i++) {
         let val = Math.floor(Math.random() * referralString.length - 1) + 1;
@@ -56,23 +55,6 @@ function getRandom(object) {
 
 //returns random string according to the params
 random =  (object) => {
-    if(object && object.max && !object.min)
-    {
-        if(parseInt(object.max) <=3){
-            object.min = 3;
-            object.max = 3;
-        }else object.min = object.max - 1;
-    }
-
-    if(object && object.min && !object.max )
-    {
-        if(parseInt(object.min) <=3){
-            object.min = 3
-            object.max = 3;
-        }else object.max = object.min + 1;
-    }
-
-
     return getRandom(object);
 };
 
