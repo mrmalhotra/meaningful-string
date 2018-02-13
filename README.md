@@ -1,4 +1,7 @@
 ## Meaningful String
+
+[![Build Status](https://travis-ci.org/mrmalhotra/meaningful-string.svg?branch=master)](https://travis-ci.org/mrmalhotra/meaningful-string)
+
 **Meaningful String** is an npm package which generates a random meaningful string.
 
 ##Getting Started
