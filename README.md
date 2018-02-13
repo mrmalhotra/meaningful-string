@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mrmalhotra/meaningful-string.svg?branch=master)](https://travis-ci.org/mrmalhotra/meaningful-string)
 [![GitHub package version](https://img.shields.io/github/package-json/v/mrmalhotra/meaningful-string.svg)]()
-![alt text](https://img.shields.io/badge/Build%20With-LOVE-red.svg)
+![alt text](https://img.shields.io/badge/Built%20With-LOVE-red.svg)
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/mrmalhotra/meaningful-string.svg)]()
 
 **Meaningful String** is an npm package which generates a random meaningful string.
