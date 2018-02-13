@@ -115,8 +115,6 @@ shortId = (object) =>{
     }
 
    return getRandom(object);
-
-
 }
 
 module.exports = {
