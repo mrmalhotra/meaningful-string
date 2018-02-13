@@ -83,6 +83,14 @@ console.log('Random Meaningful String: ',generate.meaningful(options));
 ``'Random Meaningful String: Fox-emotional-32``
 
 
+**options**
+There are a few options that can be useful:
+
+**numberUpto**:This parameter tells that the number range should be 0-numberUpto. 
+
+**joinBy**:This parameter provide the string which is used to join anumal-adjective-number.
+
+
 ##shortId
 
 It is a function which generates short id.
@@ -107,3 +115,22 @@ console.log('Random ShortId: ',generate.shortId(options));
 ``'Random ShortId: ff6ftr``
 
 ``'Random ShortId: ftr5r4``
+
+**options**
+There are a few options that can be useful:
+
+**charLength**: it tells that what should be the exact length of the generated short id. It should be in the range: (3-8)
+
+**allCaps**: It tells that only the Upper case alphabets (range A-Z) are allowed in the generated random string.
+
+**allSmall**: It tells that only the Lower case alphabets (range: a-z) are allowed in the generated random string.
+
+**capsWithNumbers**: It tells that only the Upper case alphabets (range: A-Z) and numbers (0-9) are allowed in the generated random string.
+
+**smallWithNumbers**: It tells that only the Lower case alphabets (range: a-z) and numbers (range: 0-9) are allowed in the generated random string.
+
+**onlyNumbers**: It tells that only numbers (0-9) are allowed in the generated random string.
+
+**custom**: You can also define your own charset.
+
+**charLength**: When you specify charLength, it will take privilege over min, max parameters. This string will be generated exact the size of `charLength`.

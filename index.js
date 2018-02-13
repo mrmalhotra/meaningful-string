@@ -67,7 +67,7 @@ meaningful = (object) =>{
         let upto = 1000;
         let joinString = '-';
         let chooseAnimal = animal.animalsName[max];
-        let chooseAdjective = adjective.adjective[Math.floor(Math.random() * adjective.adjective.length - 1)];
+        let chooseAdjective = adjective.adjective[Math.floor(Math.random() * (adjective.adjective.length - 1))];
 
         if(object && object.numberUpto > 0)
             upto = parseInt(object.numberUpto);
