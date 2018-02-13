@@ -14,10 +14,9 @@ In Node.js:
 
 ```
 //Load the full package
-const meaningfulString = require('meaningful-string');
+const generate = require('meaningful-string');
 
 //Generate random string
-const generate = new meaningfulString();
 
 console.log('Random String: ',generate.random());
 ```
@@ -56,3 +55,82 @@ There are a few options that can be useful:
 **smallWithNumbers**: It tells that only the Lower case alphabets (range: a-z) and numbers (range: 0-9) are allowed in the generated random string.
 
 **onlyNumbers**: It tells that only numbers (0-9) are allowed in the generated random string.
+
+**custom**: You can also define your own charset.
+**charLength**: When you specify charLength, it will take privilege over min, max parameters. This string will be generated exact the length of **charLength**.
+
+##meanigful
+
+It is a function which generates string using animal names followed by adjectives followed by numbers
+
+
+##Usage
+```
+var options = {
+"numberUpto":60,
+"joinBy":'-
+}
+
+console.log('Random Meaningful String: ',generate.meaningful(options));
+
+console.log('Random Meaningful String: ',generate.meaningful(options));
+```
+
+**Result**
+
+``'Random Meaningful String: rat-smile-45``
+
+``'Random Meaningful String: Fox-emotional-32``
+
+
+**options**
+There are a few options that can be useful:
+
+**numberUpto**:This parameter tells that the number range should be 0-numberUpto. 
+
+**joinBy**:This parameter provide the string which is used to join anumal-adjective-number.
+
+
+##shortId
+
+It is a function which generates short id.
+
+**Note**: it generates the short Id in the range of 0-8 i.e. charLength can be minimum: 0 and maximum:8.
+
+
+##Usage
+```
+var options = {
+"charLength":6,
+"custom":"frt564"
+}
+
+console.log('Random ShortId: ',generate.shortId(options));
+
+console.log('Random ShortId: ',generate.shortId(options));
+```
+
+**Result**
+
+``'Random ShortId: ff6ftr``
+
+``'Random ShortId: ftr5r4``
+
+**options**
+There are a few options that can be useful:
+
+**charLength**: it tells that what should be the exact length of the generated short id. It should be in the range: (3-8)
+
+**allCaps**: It tells that only the Upper case alphabets (range A-Z) are allowed in the generated random string.
+
+**allSmall**: It tells that only the Lower case alphabets (range: a-z) are allowed in the generated random string.
+
+**capsWithNumbers**: It tells that only the Upper case alphabets (range: A-Z) and numbers (0-9) are allowed in the generated random string.
+
+**smallWithNumbers**: It tells that only the Lower case alphabets (range: a-z) and numbers (range: 0-9) are allowed in the generated random string.
+
+**onlyNumbers**: It tells that only numbers (0-9) are allowed in the generated random string.
+
+**custom**: You can also define your own charset.
+
+**charLength**: When you specify charLength, it will take privilege over min, max parameters. This string will be generated exact the size of `charLength`.

@@ -1,10 +1,11 @@
 {
   "name": "meaningful-string",
-  "version": "1.0.0",
-  "description": "This is going to provide the random meaningful string",
+  "version": "1.0.1",
+  "description": "This is going to provide the random meaningful string using animal names followed by adjective followed by numbers. Additional to that, you can generate random shortId using custom options",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "npm test"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,15 @@
     "randomstring",
     "random-string",
     "random",
+    "alphanumeric",
+    "randomize",
+    "generate-password",
     "meaningful",
+    "string",
+    "rand",
+    "crypto",
+    "username",
+    "unique",
     "string"
   ],
   "author": "Deepak Kumar",
