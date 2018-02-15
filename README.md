@@ -1,4 +1,4 @@
-## Meaningful String
+## Meaningful-String
 
 [![Build Status](https://travis-ci.org/mrmalhotra/meaningful-string.svg?branch=master)](https://travis-ci.org/mrmalhotra/meaningful-string)
 [![GitHub package version](https://img.shields.io/github/package-json/v/mrmalhotra/meaningful-string.svg)]()
@@ -63,9 +63,15 @@ There are a few options that can be useful:
 **onlyNumbers**: It tells that only numbers (0-9) are allowed in the generated random string.
 
 **custom**: You can also define your own charset.
+
 **charLength**: When you specify charLength, it will take privilege over min, max parameters. This string will be generated exact the length of **charLength**.
 
-##meanigful
+**startWith**: This would be the starting of the generated random string.
+
+**endWith**: This would be the end of the generated random string.
+
+
+##meaningful
 
 It is a function which generates string using animal names followed by adjectives followed by numbers
 

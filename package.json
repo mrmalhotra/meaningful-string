@@ -25,7 +25,10 @@
     "crypto",
     "username",
     "unique",
-    "string"
+    "token-generator",
+    "generator",
+    "security",
+    "randomized"
   ],
   "author": "Deepak Kumar",
   "license": "MIT",

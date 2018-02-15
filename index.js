@@ -43,13 +43,20 @@ function getRandom(object) {
         lengthShouldBe = Math.floor(Math.random() * (object.max - object.min + 1)) + object.min;
 
     if (object && object.charLength)
-        lengthShouldBe = parseInt(object.charLength)
+        lengthShouldBe = parseInt(object.charLength);
 
 
     for (let i = 0; i < lengthShouldBe; i++) {
         let val = Math.floor(Math.random() * referralString.length - 1) + 1;
         string += referralString[val];
     }
+
+    if(object && object.startWith)
+        string =  object.startWith + string;
+
+    if(object && object.endWith)
+        string =  string + object.endWith;
+
     return string;
 }
 
@@ -107,6 +114,15 @@ shortId = (object) =>{
         object.max = 4;
         object.min = 4;
     }
+
+    if(object && object.startWith){
+        object.startWith = null;
+    }
+
+    if(object && object.endWith){
+        object.endWith = null;
+    }
+
 
     if(!object){
         empty.max = 4;
