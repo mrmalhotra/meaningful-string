@@ -42,8 +42,12 @@ function getRandom(object) {
     if (object && object.max && object.min)
         lengthShouldBe = Math.floor(Math.random() * (object.max - object.min + 1)) + object.min;
 
-    if (object && object.charLength)
+    if (object && object.charLength && !object.fromShortId)
         lengthShouldBe = parseInt(object.charLength);
+
+    if(object && object.fromShortId)
+        if(object.charLength >= 3 && object.charLength <= 8)
+            lengthShouldBe = parseInt(object.charLength);
 
 
     for (let i = 0; i < lengthShouldBe; i++) {
@@ -69,7 +73,6 @@ random =  (object) => {
 meaningful = (object) =>{
 
         let max = Math.floor(Math.random() * animal.animalsName.length - 1);
-        console.log('check word one ',max);
         let order = [];
         let upto = 1000;
         let joinString = '-';
@@ -94,7 +97,21 @@ meaningful = (object) =>{
 shortId = (object) =>{
 
     var empty = {};
-    if(object && object.charLength && parseInt(object.charLength) > 8){
+
+    if(object)
+        object.fromShortId = true;
+
+    if(object && !object.charLength){
+        object.max = 4;
+        object.min = 4;
+    }
+
+    if(object && object.charLength === 0){
+        object.min = 3;
+        object.max = 3;
+    }
+
+    if((object && object.charLength) && (parseInt(object.charLength) > 8)){
         object.max = 8;
         object.min = 8
     }
@@ -104,15 +121,10 @@ shortId = (object) =>{
         object.min = 3;
     }
 
-    if(object && object.charLength && parseInt(object.charLength) >= 3 || object && object.charLength && parseInt(object.charLength) <= 8){
+    if((object && object.charLength) && (parseInt(object.charLength) >= 3 && parseInt(object.charLength) <= 8)){
         var value = parseInt(object.charLength);
         object.max = value;
         object.min = value;
-    }
-
-    if(object && !object.charLength){
-        object.max = 4;
-        object.min = 4;
     }
 
     if(object && object.startWith){
@@ -127,10 +139,11 @@ shortId = (object) =>{
     if(!object){
         empty.max = 4;
         empty.min = 4;
+        empty.fromShortId = true;
         return getRandom(empty);
     }
 
-   return getRandom(object);
+    return getRandom(object);
 }
 
 module.exports = {
