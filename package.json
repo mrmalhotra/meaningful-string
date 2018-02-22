@@ -1,6 +1,6 @@
 {
   "name": "meaningful-string",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "This is going to provide the random meaningful string using animal names followed by adjective followed by numbers. Additional to that, you can generate random shortId using custom options",
   "main": "index.js",
   "scripts": {

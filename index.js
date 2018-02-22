@@ -39,6 +39,13 @@ function getRandom(object) {
     if (object && object.min)
         lengthShouldBeAtleast = parseInt(object.min);
 
+    if(lengthShouldBeAtleast > lengthShouldBeAtlast){
+        var temp = lengthShouldBeAtleast;
+        lengthShouldBeAtleast = lengthShouldBeAtlast;
+        lengthShouldBeAtlast = temp;
+        console.log('checking swaping value ',lengthShouldBeAtleast, ' last ',lengthShouldBeAtlast)
+    }
+
     if (object && object.max && object.min)
         lengthShouldBe = Math.floor(Math.random() * (object.max - object.min + 1)) + object.min;
 
@@ -101,7 +108,7 @@ shortId = (object) =>{
     if(object)
         object.fromShortId = true;
 
-    if(object && !object.charLength){
+    if(object && !object.charLength && !object.min && object.max){
         object.max = 4;
         object.min = 4;
     }

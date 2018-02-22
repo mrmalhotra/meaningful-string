@@ -80,7 +80,7 @@ It is a function which generates string using animal names followed by adjective
 ```
 var options = {
     "numberUpto":60,
-    "joinBy":'-
+    "joinBy":'-'
 }
 
 console.log('Random Meaningful String: ',generate.meaningful(options));
@@ -90,9 +90,9 @@ console.log('Random Meaningful String: ',generate.meaningful(options));
 
 **Result**
 
-``'Random Meaningful String: rat-smile-45``
+``Random Meaningful String: rat-smile-45``
 
-``'Random Meaningful String: Fox-emotional-32``
+``Random Meaningful String: Fox-emotional-32``
 
 
 **options**
@@ -126,9 +126,9 @@ console.log('Random ShortId: ',generate.shortId(options));
 
 **Result**
 
-``'Random ShortId: ff6ftr``
+``Random ShortId: ff6ftr``
 
-``'Random ShortId: ftr5r4``
+``Random ShortId: ftr5r4``
 
 **options**
 There are a few options that can be useful:
