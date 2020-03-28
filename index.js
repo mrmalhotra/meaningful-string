@@ -153,8 +153,12 @@ shortId = (object) =>{
     return getRandom(object);
 }
 
+const hashCode = (s) => s ? s.split('').reduce((a,b)=>{a=((a<<5)-a)+b.charCodeAt(0);return a&a},0):0
+
+
 module.exports = {
     random,
     meaningful,
-    shortId
+    shortId,
+    hashCode
 }

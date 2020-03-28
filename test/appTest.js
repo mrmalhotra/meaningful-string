@@ -1,6 +1,8 @@
 const assert = require('chai').assert;
 const mString = require('../index');
 
+const falseValArray = [0, "", null, undefined]
+
 describe('App',()=>{
     it('Should return random string in range ',()=>{
         assert.equal(mString.random({min:9,max:9}).length,9);
@@ -61,7 +63,20 @@ describe('App',()=>{
             assert.include(mString.random({endWith: stringToBeAdded}), stringToBeAdded, 'it contains the: ' + stringToBeAdded);
         });
     }
+
+    it('Hash should Returning Integer',()=>{
+        assert.typeOf(mString.hashCode("npm js"),"number")
+    });
+        
+    falseValArray.forEach(x=> {
+        it('Hash should Returning 0',()=>{
+            assert.equal(mString.hashCode(x),0)
+    
+    })
+})
+    
 });
+
 
 
 
