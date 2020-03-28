@@ -151,6 +151,23 @@ There are a few options that can be useful:
 
 **charLength**: When you specify charLength, it will take privilege over min, max parameters. This string will be generated exact the size of `charLength`.
 
+##hashCode
+
+This function is used to generate hash code.
+
+
+##Usage
+```
+let string = "meaningful-string hash"
+
+console.log('Hash: ',generate.hashCode(string));
+
+```
+
+**Result**
+
+``Hash:  287044560``
+
 
 ##LICENSE
 
