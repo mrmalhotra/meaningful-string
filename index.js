@@ -72,12 +72,10 @@ function getRandom(object) {
 }
 
 //returns random string according to the params
-const random =  (object) => {
-    return getRandom(object);
-};
+const random =  object => getRandom(object);
 
 //returns a meaningful random string generated with the combination of animal-adjective-numbers
-const meaningful = (object) =>{
+const meaningful = object => {
 
         let max = Math.floor(Math.random() * animal.animalsName.length - 1);
         let order = [];
@@ -90,9 +88,9 @@ const meaningful = (object) =>{
             upto = parseInt(object.numberUpto);
 
         if(object && object.joinBy)
-         joinString = object.joinBy;
+            joinString = object.joinBy;
 
-         let chooseNumber = Math.floor(Math.random() * upto);
+        let chooseNumber = Math.floor(Math.random() * upto);
 
         order.push(chooseAnimal);
         order.push(chooseAdjective);
@@ -101,29 +99,29 @@ const meaningful = (object) =>{
         return order.join(joinString);
 };
 
-const shortId = (object) =>{
+const shortId = object => {
 
     var empty = {};
 
     if(object)
         object.fromShortId = true;
 
-    if(object && !object.charLength && !object.min && object.max){
+    if(object && !object.charLength && !object.min && object.max) {
         object.max = 4;
         object.min = 4;
     }
 
-    if(object && object.charLength === 0){
+    if(object && object.charLength === 0) {
         object.min = 3;
         object.max = 3;
     }
 
-    if((object && object.charLength) && (parseInt(object.charLength) > 8)){
+    if((object && object.charLength) && (parseInt(object.charLength) > 8)) {
         object.max = 8;
         object.min = 8
     }
 
-    if(object && object.charLength && parseInt(object.charLength) < 3){
+    if(object && object.charLength && parseInt(object.charLength) < 3) {
         object.max = 3;
         object.min = 3;
     }
@@ -153,7 +151,7 @@ const shortId = (object) =>{
     return getRandom(object);
 }
 
-const hashCode = (s) => s ? s.split('').reduce((a,b)=>{a=((a<<5)-a)+b.charCodeAt(0);return a&a},0):0
+const hashCode = s => s ? s.split('').reduce((a,b)=>{a=((a<<5)-a)+b.charCodeAt(0);return a&a},0):0
 
 
 module.exports = {
