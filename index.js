@@ -72,12 +72,12 @@ function getRandom(object) {
 }
 
 //returns random string according to the params
-random =  (object) => {
+const random =  (object) => {
     return getRandom(object);
 };
 
 //returns a meaningful random string generated with the combination of animal-adjective-numbers
-meaningful = (object) =>{
+const meaningful = (object) =>{
 
         let max = Math.floor(Math.random() * animal.animalsName.length - 1);
         let order = [];
@@ -101,7 +101,7 @@ meaningful = (object) =>{
         return order.join(joinString);
 };
 
-shortId = (object) =>{
+const shortId = (object) =>{
 
     var empty = {};
 
