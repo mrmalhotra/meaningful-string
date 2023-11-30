@@ -7,10 +7,10 @@
 
 **Meaningful String** is an npm package which generates a random meaningful string.
 
-##Getting Started
+## Getting Started
 Here is how you can install this package globally using npm
 
-##Installation
+## Installation
 using npm
 ```
 $ npm install meaningful-string -g
@@ -29,9 +29,9 @@ console.log('Random String: ',generate.random());
 
 ``Random String: HJ7H9Lkt7hFdS7mJY48NnmHH6hDdg76lIfaD4MhU6Y``
 
-##Usage
+**Usage**
 ```
-var options = {
+let options = {
      "min":10,
      "max":15,
      "capsWithNumbers":true
@@ -71,14 +71,14 @@ There are a few options that can be useful:
 **endWith**: This would be the end of the generated random string.
 
 
-##meaningful
+## meaningful
 
 It is a function which generates string using animal names followed by adjectives followed by numbers
 
 
-##Usage
+**Usage**
 ```
-var options = {
+let options = {
     "numberUpto":60,
     "joinBy":'-'
 }
@@ -105,16 +105,16 @@ There are a few options that can be useful:
 **joinBy**:This parameter provide the string which is used to join animal-adjective-number.
 
 
-##shortId
+## shortId
 
 It is a function which generates short id.
 
 **Note**: it generates the short Id in the range of 0-8 i.e. charLength can be minimum: 0 and maximum:8.
 
 
-##Usage
+**Usage**
 ```
-var options = {
+let options = {
 "charLength":6,
 "custom":"frt564"
 }
@@ -151,12 +151,12 @@ There are a few options that can be useful:
 
 **charLength**: When you specify charLength, it will take privilege over min, max parameters. This string will be generated exact the size of `charLength`.
 
-##hashCode
+## hashCode
 
 This function is used to generate hash code.
 
 
-##Usage
+**Usage**
 ```
 let string = "meaningful-string hash"
 
@@ -169,6 +169,25 @@ console.log('Hash: ',generate.hashCode(string));
 ``Hash:  287044560``
 
 
-##LICENSE
+## uuidv4
+
+It is a function which generates version 4 UUID.
+
+**Usage**
+```
+console.log('uuidv4: ',generate.uuidv4());
+
+console.log('uuidv4: ',generate.uuidv4());
+
+```
+
+**Result**
+
+``uuidv4: 430aa590-3021-4a9d-827e-253e9c58dd2f``
+
+``uuidv4: b02da2ec-622c-4557-b643-2c53d53030cc``
+
+
+## LICENSE
 
 **meaningful-string** is licensed under the MIT license.
